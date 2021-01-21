@@ -17,3 +17,4 @@ regex>=2020.11.11
 graphviz==0.16
 requests>=2.25.1
 git+git://github.com/online-ml/river.git
+utils
