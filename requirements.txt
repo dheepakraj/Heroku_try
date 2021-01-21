@@ -14,6 +14,6 @@ scikit-learn>=0.18
 matplotlib>=1.4.3
 nltk>=3.2.5
 regex>=2020.11.11
-river==0.1.0
 graphviz==0.16
 requests>=2.25.1
+river==0.1.0
