@@ -16,4 +16,4 @@ nltk>=3.2.5
 regex>=2020.11.11
 graphviz==0.16
 requests>=2.25.1
-git+git://github.com/online-ml/river.git@v0.1
+git+git://github.com/online-ml/river.git
