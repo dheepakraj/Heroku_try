@@ -48,6 +48,8 @@ def text_processing(dataset, Y=None):
 
   return dataset
 
+from utils import text_processing
+
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
