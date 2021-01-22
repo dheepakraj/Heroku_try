@@ -74,4 +74,5 @@ def predict():
 
 
 if __name__ == "__main__":
+    text_processing(dataset, Y=None)
     app.run(debug=True)
