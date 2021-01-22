@@ -8,6 +8,11 @@ from nltk.corpus import stopwords
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/predict',methods=['POST'])
 def text_processing(dataset, Y=None):
   def count_punct(text):
     try:
@@ -49,13 +54,6 @@ def text_processing(dataset, Y=None):
 
 
   return dataset
-
-
-@app.route('/')
-def home():
-    return render_template('index.html')
-
-@app.route('/predict',methods=['POST'])
 def predict():
     '''
     For rendering results on HTML GUI
