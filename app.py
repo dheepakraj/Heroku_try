@@ -5,7 +5,9 @@ import re
 from nltk.stem.porter import PorterStemmer
 from nltk.corpus import stopwords
 
-
+app = Flask(__name__)
+model = pickle.load(open('model.pkl', 'rb'))
+@app.before_first_request
 def text_processing(dataset, Y=None):
   def count_punct(text):
     try:
@@ -50,8 +52,8 @@ def text_processing(dataset, Y=None):
 
 from utils import text_processing
 
-app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
+#app = Flask(__name__)
+#model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
 def home():
