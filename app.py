@@ -7,7 +7,7 @@ from nltk.corpus import stopwords
 
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
-@app.before_first_request
+
 def text_processing(dataset, Y=None):
   def count_punct(text):
     try:
@@ -74,5 +74,4 @@ def predict():
 
 
 if __name__ == "__main__":
-  utils.load_document()
-  app.run(debug=True)
+    app.run(debug=True)
