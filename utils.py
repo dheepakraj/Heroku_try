@@ -1,3 +1,5 @@
+import utils
+
 def text_processing(dataset, Y=None):
   def count_punct(text):
     try:
@@ -39,3 +41,4 @@ def text_processing(dataset, Y=None):
 
 
   return dataset
+if __name__ == '__main__':
