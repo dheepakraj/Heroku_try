@@ -18,9 +18,10 @@ def predict():
     '''
     For rendering results on HTML GUI
     '''
-    text_processing()
+    
     features = [x for x in request.form.values()]
     final_features = {'title':features[1],'text':features[0]}
+    text_processing(final_features)
     prediction = model.predict_one(final_features)
 
     #output = round(prediction[0], 2)
